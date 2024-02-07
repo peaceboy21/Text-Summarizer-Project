@@ -37,7 +37,7 @@ class ModelTrainer:
             weight_decay=0.01, logging_steps=10,
             evaluation_strategy='steps', eval_steps=500, save_steps=1e6,
             gradient_accumulation_steps=16
-        ) 
+        )
 
         trainer = Trainer(model=model_pegasus, args=trainer_args,
                   tokenizer=tokenizer, data_collator=seq2seq_data_collator,
